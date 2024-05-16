@@ -4,6 +4,8 @@
 """
 Sistem Manajemen Inventaris
 
+ASSERTIONS, DEFENSIVE PROGRAMMING, DAN DESIGN BY CONTRACT
+
 Program yang saya buat ini menyediakan kelas dan fungsi untuk mengelola sistem inventaris. Modul ini mencakup
 fitur CRUD inventaris. Setiap item
 memiliki ID, nama, dan qty.
