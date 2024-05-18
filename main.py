@@ -131,7 +131,8 @@ def main():
         print("2. Hapus Item")
         print("3. Perbarui Jumlah")
         print("4. Lihat Item")
-        print("5. Keluar")
+        print("5. Cari Item")
+        print("6. Keluar")
 
         choice = input("Masukkan pilihan Anda: ")
 
@@ -177,6 +178,16 @@ def main():
                 print(
                     f"ID: {item.id}, Nama: {item.name}, Jumlah: {item.quantity}")
         elif choice == '5':
+            try:
+                item_id = int(input("Masukkan ID item yang akan dicari: "))
+                item = inventory.get_item(item_id)
+                print(
+                    f"Item ditemukan: ID: {item.id}, Nama: {item.name}, Jumlah: {item.quantity}")
+            except ValueError:
+                print("ID tidak valid. Harap masukkan integer yang valid.")
+            except TypeError as e:
+                print(f"Error: {e}")
+        elif choice == '6':
             print("Keluar dari program.")
             break
         else:
